@@ -71,9 +71,11 @@ if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]
 fi
 
 # Enable ssh-agent
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
-fi
-if [[ ! "$SSH_AUTH_SOCK" ]]; then
-    eval "$(<"$XDG_RUNTIME_DIR/ssh-agent.env")"
-fi
+# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+# fi
+# if [[ ! "$SSH_AUTH_SOCK" ]]; then
+#     eval "$(<"$XDG_RUNTIME_DIR/ssh-agent.env")"
+# fi
+# Enabme Keychain
+eval `keychain --noask --eval id_rsa`
