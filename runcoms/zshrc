@@ -23,5 +23,15 @@ ttyctl -f
 source ~/bin/dotfiles/aliases
 autoload -U compinit && compinit
 
+# Enable ssh-agent
+# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+# fi
+# if [[ ! "$SSH_AUTH_SOCK" ]]; then
+#     eval "$(<"$XDG_RUNTIME_DIR/ssh-agent.env")"
+# fi
+# Enabme Keychain
+eval `keychain --quiet --noask --eval id_rsa`
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
