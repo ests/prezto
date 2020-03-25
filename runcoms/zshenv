@@ -12,3 +12,5 @@ fi
 
 # Trick vim extensions that we are using iTerm2 and not alacritty
 export ITERM_PROFILE="ests"
+
+export npm_config_prefix=~/.node_modules
