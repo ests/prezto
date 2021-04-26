@@ -38,11 +38,16 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+<<<<<<< HEAD
   'prompt' \
   'pacman' \
   'zsh-z' \
   'osx' \
   'rsync'
+=======
+  'history-substring-search' \
+  'prompt'
+>>>>>>> upstream/master
 
 #
 # Autosuggestions
