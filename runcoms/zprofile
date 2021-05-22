@@ -49,7 +49,7 @@ path=(
   $HOME/.rbenv/bin
   $HOME/.rbenv/shims
   $HOME/.cargo/bin
-  $GOPATH/go
+  $GOPATH/bin
   /usr/local/{bin,sbin}
   $path
 )
