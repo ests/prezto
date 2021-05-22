@@ -12,3 +12,4 @@ fi
 
 # Trick vim extensions that we are using iTerm2 and not alacritty
 export ITERM_PROFILE="ests"
+if [ -e /Users/ernest/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/ernest/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
